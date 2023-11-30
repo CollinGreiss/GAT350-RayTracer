@@ -13,6 +13,10 @@ public:
 	void Shutdown();
 	bool CreateWindow( const std::string& title, int width, int height );
 
+	void PresentCanvas( const class Canvas& canvas );
+
+	friend Canvas;
+
 private:
 
 	SDL_Window* m_window = nullptr;

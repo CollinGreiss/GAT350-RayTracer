@@ -1,4 +1,7 @@
 #include "Renderer.h"
+#include "Canvas.h"
+#include "Random.h"
+
 #include <iostream>
 
 
@@ -10,6 +13,9 @@ int main( int, char** ) {
 	renderer.Initialize();
 
 	renderer.CreateWindow( "RayTracer", 400, 300 );
+	Canvas canvas( 400, 300, renderer );
+
+	seedRandom( time(NULL) );
 
 	bool quit = false;
 	
@@ -25,6 +31,12 @@ int main( int, char** ) {
 			break;
 		
 		}
+
+		canvas.Clear( { 0, 0, 0, 1 } );
+		for ( int i = 0; i < 1000; i++ ) canvas.DrawPoint( { random(400), random(300) }, { randomf(), randomf(), randomf(), 1});
+		canvas.Update();
+
+		renderer.PresentCanvas( canvas );
 	
 	}
 	
