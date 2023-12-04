@@ -19,6 +19,15 @@
     <ClCompile Include="Canvas.cpp">
       <Filter>Source</Filter>
     </ClCompile>
+    <ClCompile Include="Camera.cpp">
+      <Filter>Source</Filter>
+    </ClCompile>
+    <ClCompile Include="Scene.cpp">
+      <Filter>Source</Filter>
+    </ClCompile>
+    <ClCompile Include="Sphere.cpp">
+      <Filter>Source</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Renderer.h">
@@ -37,6 +46,21 @@
       <Filter>Source\Math</Filter>
     </ClInclude>
     <ClInclude Include="Canvas.h">
+      <Filter>Source</Filter>
+    </ClInclude>
+    <ClInclude Include="Scene.h">
+      <Filter>Source</Filter>
+    </ClInclude>
+    <ClInclude Include="Camera.h">
+      <Filter>Source</Filter>
+    </ClInclude>
+    <ClInclude Include="Material.h">
+      <Filter>Source</Filter>
+    </ClInclude>
+    <ClInclude Include="Object.h">
+      <Filter>Source</Filter>
+    </ClInclude>
+    <ClInclude Include="Sphere.h">
       <Filter>Source</Filter>
     </ClInclude>
   </ItemGroup>

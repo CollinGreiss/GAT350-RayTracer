@@ -19,7 +19,7 @@ public:
 
     const glm::ivec2& GetSize() const { return m_size; }
 
-    friend Renderer;
+    friend class Renderer;
 
 private:
 
