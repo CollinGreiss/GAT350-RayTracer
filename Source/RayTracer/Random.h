@@ -3,19 +3,19 @@
 #include <algorithm>
 #include <glm/gtx/norm.hpp>
 
-void seedRandom( unsigned int seed ) {
+inline void seedRandom( unsigned int seed ) {
 
 	srand( seed );
 
 }
 
-float randomf() {
+inline float randomf() {
 
 	return rand() / (float) RAND_MAX;
 
 }
 
-float random( float min, float max ) {
+inline float random( float min, float max ) {
 
 	if ( min > max ) std::swap( min, max );
 
@@ -23,9 +23,15 @@ float random( float min, float max ) {
 
 }
 
-float random( float max ) {
+inline float random( float max ) {
 
 	return random( 0, max );
+
+}
+
+inline int randomi(int max) {
+
+	return (int) ( rand() % ( max + 1 ) );
 
 }
 

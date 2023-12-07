@@ -28,6 +28,18 @@
     <ClCompile Include="Sphere.cpp">
       <Filter>Source</Filter>
     </ClCompile>
+    <ClCompile Include="Material.cpp">
+      <Filter>Source</Filter>
+    </ClCompile>
+    <ClCompile Include="Plane.cpp">
+      <Filter>Source</Filter>
+    </ClCompile>
+    <ClCompile Include="Triangle.cpp">
+      <Filter>Source</Filter>
+    </ClCompile>
+    <ClCompile Include="Mesh.cpp">
+      <Filter>Source</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Renderer.h">
@@ -63,5 +75,8 @@
     <ClInclude Include="Sphere.h">
       <Filter>Source</Filter>
     </ClInclude>
+    <ClInclude Include="Plane.h" />
+    <ClInclude Include="Triangle.h" />
+    <ClInclude Include="Mesh.h" />
   </ItemGroup>
 </Project>

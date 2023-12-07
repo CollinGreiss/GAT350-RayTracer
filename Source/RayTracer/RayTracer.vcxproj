@@ -24,20 +24,27 @@
     <ClInclude Include="Color.h" />
     <ClInclude Include="Material.h" />
     <ClInclude Include="MathUtils.h" />
+    <ClInclude Include="Mesh.h" />
     <ClInclude Include="Object.h" />
+    <ClInclude Include="Plane.h" />
     <ClInclude Include="Random.h" />
     <ClInclude Include="Ray.h" />
     <ClInclude Include="Renderer.h" />
     <ClInclude Include="Scene.h" />
     <ClInclude Include="Sphere.h" />
+    <ClInclude Include="Triangle.h" />
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="Camera.cpp" />
     <ClCompile Include="Canvas.cpp" />
     <ClCompile Include="Main.cpp" />
+    <ClCompile Include="Material.cpp" />
+    <ClCompile Include="Mesh.cpp" />
+    <ClCompile Include="Plane.cpp" />
     <ClCompile Include="Renderer.cpp" />
     <ClCompile Include="Scene.cpp" />
     <ClCompile Include="Sphere.cpp" />
+    <ClCompile Include="Triangle.cpp" />
   </ItemGroup>
   <PropertyGroup Label="Globals">
     <VCProjectVersion>17.0</VCProjectVersion>
@@ -153,16 +160,17 @@
       <SDLCheck>true</SDLCheck>
       <PreprocessorDefinitions>_DEBUG;_CONSOLE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <ConformanceMode>true</ConformanceMode>
-      <AdditionalIncludeDirectories>$(SolutionDir)Source\ThirdParty\glm;$(SolutionDir)Source\ThirdParty\SDL2-2.28.5\include</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>$(SolutionDir)Source\ThirdParty\glm;$(SolutionDir)Source\ThirdParty\SDL2-2.28.5\include;$(SolutionDir)Source\ThirdParty\assimp\include</AdditionalIncludeDirectories>
     </ClCompile>
     <Link>
       <SubSystem>Console</SubSystem>
       <GenerateDebugInformation>true</GenerateDebugInformation>
       <AdditionalLibraryDirectories>$(SolutionDir)Source\ThirdParty\SDL2-2.28.5\lib\$(PlatformTarget)</AdditionalLibraryDirectories>
-      <AdditionalDependencies>$(SolutionDir)Source\ThirdParty\SDL2-2.28.5\lib\$(PlatformTarget)\SDL2.lib;$(SolutionDir)Source\ThirdParty\SDL2-2.28.5\lib\$(PlatformTarget)\SDL2main.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <AdditionalDependencies>$(SolutionDir)Source\ThirdParty\SDL2-2.28.5\lib\$(PlatformTarget)\SDL2.lib;$(SolutionDir)Source\ThirdParty\SDL2-2.28.5\lib\$(PlatformTarget)\SDL2main.lib;$(SolutionDir)Source\ThirdParty\assimp\lib\$(Configuration)\assimp-vc143-mtd.lib;%(AdditionalDependencies)</AdditionalDependencies>
     </Link>
     <PostBuildEvent>
-      <Command>xcopy "$(SolutionDir)Source\ThirdParty\SDL2-2.28.5\lib\$(PlatformTarget)\*.dll" "$(SolutionDir)Build" /Y</Command>
+      <Command>xcopy "$(SolutionDir)Source\ThirdParty\SDL2-2.28.5\lib\$(PlatformTarget)\*.dll" "$(SolutionDir)Build" /Y
+xcopy "$(SolutionDir)Source\ThirdParty\assimp\lib\$(Configuration)\*.dll" "$(SolutionDir)Build" /Y</Command>
     </PostBuildEvent>
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">

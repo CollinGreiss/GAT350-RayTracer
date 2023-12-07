@@ -1,6 +1,7 @@
 #include "Renderer.h"
 
 #include "Canvas.h"
+
 #include <iostream>
 
 bool Renderer::Initialize() {
