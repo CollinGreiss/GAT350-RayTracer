@@ -14,8 +14,8 @@
 
 const int width = 400;
 const int height = 300;
-const int samples = 20;
-const int depth = 5;
+const int samples = 400;
+const int depth = 12;
 
 int main( int argc, char* argv[] ) {
 
@@ -26,12 +26,10 @@ int main( int argc, char* argv[] ) {
 	Canvas canvas( width, height, renderer );
 
 	float aspectRatio = canvas.GetSize().x / (float) canvas.GetSize().y;
-	std::shared_ptr<Camera> camera = std::make_shared<Camera>( glm::vec3 { 0, 2, 10 }, glm::vec3 { 0, 0, 0 }, glm::vec3 { 0, 1, 0 }, 20.0f, aspectRatio );
 
-	Scene scene( glm::vec3 { 1.0f }, glm::vec3 { 0.5f, 0.7f, 1.0f } );
-	scene.SetCamera( camera );
+	Scene scene( glm::vec3 { 1.0f }, glm::vec3 { 1.0f } );
 
-	scene.InitScene01( scene, canvas );
+	scene.InitScene03( scene, canvas );
 
 	canvas.Clear( { 0, 0, 0, 1 } );
 	scene.Render( canvas, samples, depth );

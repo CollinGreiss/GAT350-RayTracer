@@ -21,6 +21,8 @@ public:
 
 	void InitScene01( Scene& scene, const class Canvas& canvas );
 	void InitScene02( Scene& scene, const class Canvas& canvas );
+	void InitScene03( Scene& scene, const class Canvas& canvas );
+	void InitScene04( Scene& scene, const class Canvas& canvas );
 
 	void SetCamera( std::shared_ptr<Camera> camera ) { m_camera = camera; }
 
